@@ -1,0 +1,204 @@
+LIVRABLE 0
+Proposition de Projet Mobile — OrientApp
+Plateforme mobile d'orientation intelligente des étudiants après le Bac
+
+Module : Développement Mobile — 2ème Semestre
+Année universitaire : 2025–2026
+Réalisé par : Groupe 3
+Encadrée par : Mme Ngom
+
+
+================================================================================
+PARTIE 1 : PRÉSENTATION DU PROJET
+================================================================================
+
+Cette partie décrit de manière synthétique la plateforme OrientApp, son contexte,
+sa problématique et ses objectifs. Elle constitue le socle conceptuel du projet
+avant d'entrer dans les détails techniques.
+
+
+1.1 Description du projet
+--------------------------
+OrientApp est une plateforme mobile d'orientation intelligente destinée à
+accompagner les bacheliers dans le choix de leur filière académique et de leur
+établissement de formation. Elle repose sur quatre piliers principaux :
+
+  - Test d'aptitudes : évaluation des compétences, centres d'intérêt et
+    préférences de l'utilisateur.
+  - Matching intelligent : correspondance entre le profil de l'étudiant et les
+    filières disponibles.
+  - Comparaison des écoles : analyse multicritères (filières, coûts, localisation,
+    débouchés).
+  - Conseils personnalisés : recommandations automatiques pour aider l'étudiant
+    à décider.
+
+L'objectif principal est de réduire les mauvais choix d'orientation, d'améliorer
+la réussite scolaire et de faciliter l'accès à une information fiable, centralisée
+et adaptée à chaque profil.
+
+
+1.2 Contexte
+-------------
+Au Sénégal, chaque année, des milliers de bacheliers font face à un choix crucial :
+quelle filière et quel établissement choisir ? Cette étape est souvent marquée par
+le stress, l'incertitude et le manque d'information fiable. Les conseils reçus sont
+fréquemment subjectifs (entourage, amis) et les outils numériques adaptés font
+défaut.
+
+Cette situation entraîne des choix inadéquats, des abandons et des réorientations
+tardives. La création d'OrientApp répond à ce manque en centralisant les
+informations sur les filières et établissements, et en proposant un accompagnement
+personnalisé basé sur des données objectives.
+
+
+1.3 Problématique
+------------------
+Dans un contexte où l'accès à l'enseignement supérieur au Sénégal est marqué par
+une abondance d'informations non structurées et une absence d'outils d'aide à la
+décision personnalisés, comment concevoir une plateforme numérique intelligente
+capable d'accompagner l'étudiant dans le choix d'une filière et d'un établissement
+adaptés à son profil académique, à ses contraintes socio-économiques et à ses
+aspirations professionnelles ?
+
+
+1.4 Objectifs
+--------------
+L'objectif général est de concevoir et développer une solution digitale
+accompagnant les bacheliers dans le choix d'une filière et d'un établissement
+adaptés à leur profil. Les objectifs spécifiques sont :
+
+  - Guider les bacheliers dans le choix de leurs filières d'études.
+  - Orienter les étudiants vers des universités ou écoles selon leurs profils,
+    ambitions et débouchés professionnels.
+  - Proposer une large gamme de possibilités selon le parcours scolaire, le diplôme
+    obtenu et les aptitudes dans les différentes matières.
+  - Utiliser des informations comme la résidence, les moyens financiers et les
+    préférences pour mieux orienter chaque étudiant.
+
+
+================================================================================
+PARTIE 2 : PROPOSITION DE PROJET — CONTENU DU POWERPOINT
+================================================================================
+
+Cette partie correspond exactement au contenu de la présentation PowerPoint
+(Livrable 0). Chaque section indique clairement à quelle diapositive elle correspond.
+
+
+2.1 Présentation Générale
+--------------------------
+Diapositive 1 — Page de titre — OrientApp
+
+  Nom          : OrientApp
+  Slogan       : Plateforme mobile d'orientation intelligente des étudiants après le Bac
+  Technologies : Flutter · Dart · Android & iOS · Laravel · MySQL
+  Groupe       : Groupe 3 — Encadrée par Mme Ngom — 2025–2026
+
+
+2.2 Nom & Thème de l'Application
+----------------------------------
+Diapositive 2 — Nom & Thème de l'Application
+
+Le nom OrientApp est une contraction de « Orientation » et « Application ».
+Son slogan est « Ton avenir commence ici ». Le thème central est l'Orientation
+Académique Intelligente : aider les bacheliers à choisir leur filière grâce à des
+recommandations personnalisées, disponibles sur Android et iOS via Flutter.
+
+
+2.3 Fonctionnalités Prévues
+-----------------------------
+Diapositive 3 — Fonctionnalités Prévues
+
+OrientApp propose 6 fonctionnalités principales couvrant l'ensemble du parcours
+utilisateur :
+
+  01 - Inscription & Connexion
+       Création de compte étudiant, connexion sécurisée et gestion du profil
+       utilisateur.
+
+  02 - Questionnaire d'Orientation
+       Questions sur les résultats scolaires, matières préférées et centres
+       d'intérêt.
+
+  03 - Recommandations Intelligentes
+       Suggestions de filières et formations adaptées au profil de l'étudiant.
+
+  04 - Catalogue des Formations
+       Liste complète des filières avec descriptions, débouchés et conditions
+       d'accès.
+
+  05 - Tableau de Bord Étudiant
+       Suivi des recommandations, historique des recherches et formations
+       favorites.
+
+  06 - Espace Conseiller
+       Interface dédiée aux conseillers pour suivre et accompagner les étudiants.
+
+
+2.4 Écrans Principaux
+----------------------
+Diapositive 4 — Écrans Principaux — Maquettes
+
+5 écrans principaux ont été modélisés sous forme de maquettes schématiques :
+
+  Connexion      (Bleu foncé)  : Champ email, mot de passe, bouton Se connecter,
+                                 lien Créer un compte.
+  Questionnaire  (Vert foncé)  : Questions sur moyenne, matières préférées,
+                                 choix multiples.
+  Recommandations (Violet)     : Filières suggérées avec pourcentage de
+                                 compatibilité.
+  Catalogue      (Rouge foncé) : Liste des formations avec champ de recherche
+                                 et filtres.
+  Tableau de bord (Bleu marine): Historique, favoris, statistiques et profil
+                                 personnel.
+
+Chaque écran est représenté sous forme de téléphone mobile avec son contenu
+simplifié, chacun identifié par une couleur distincte pour faciliter la lecture.
+
+
+2.5 Architecture Technique
+---------------------------
+Diapositive 5 — Architecture Technique
+
+L'application repose sur une architecture 3 couches communiquant via une API REST :
+
+  Couche Présentation
+    Technologie : Flutter (Dart)
+    Rôle        : Interface mobile Android & iOS
+    Éléments    : Widgets, navigation, appels API
+
+  Couche Métier
+    Technologie : Laravel (PHP)
+    Rôle        : Serveur API REST, logique
+    Éléments    : Routes, contrôleurs, Sanctum
+
+  Couche Données
+    Technologie : MySQL
+    Rôle        : Stockage des données
+    Éléments    : Tables étudiants, formations, résultats
+
+Flux :
+  Flutter envoie une requête HTTP
+    → Laravel traite et interroge MySQL
+    → MySQL retourne les données
+    → Laravel renvoie une réponse JSON
+    → Flutter affiche les résultats
+
+
+2.6 Conclusion — En Résumé
+---------------------------
+Diapositive 6 — En Résumé — Récapitulatif du projet
+
+  Application    : OrientApp — Flutter (Android & iOS)
+  Thème          : Orientation intelligente des étudiants après le Bac
+  Fonctionnalités: 6 fonctionnalités :
+                   Connexion · Questionnaire · Recommandations ·
+                   Catalogue · Dashboard · Conseiller
+  Écrans         : 5 écrans principaux :
+                   Connexion, Questionnaire, Recommandations,
+                   Catalogue, Tableau de bord
+  Stack          : Flutter (Dart) · Laravel (PHP) · MySQL
+
+
+================================================================================
+— Fin du document — Groupe 3 · Mme Ngom · 2025–2026 —
+================================================================================

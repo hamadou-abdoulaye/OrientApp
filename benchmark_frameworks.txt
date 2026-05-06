@@ -1,0 +1,173 @@
+RAPPORT TECHNIQUE
+Choix et Benchmark des Frameworks
+
+Projet : Plateforme d'Orientation Intelligente des Étudiants après le Bac
+Module : Développement Web — 2ème Semestre
+Année universitaire : 2024–2025
+Réalisé par : Groupe 1
+Encadrée par : Mme Ngom
+
+
+================================================================================
+1. INTRODUCTION
+================================================================================
+
+Dans le cadre de la continuité du projet UML réalisé au premier semestre, notre
+groupe a développé la modélisation d'une plateforme d'orientation intelligente des
+étudiants après le baccalauréat. Ce second semestre, dans le cadre du module de
+développement web, nous passons à la phase d'implémentation de ce projet.
+
+Le présent rapport a pour objectif de présenter et justifier les choix
+technologiques retenus pour le développement de notre application, à travers une
+analyse comparative (benchmark) des différents frameworks disponibles sur le
+marché.
+
+
+================================================================================
+2. STACK TECHNOLOGIQUE RETENUE
+================================================================================
+
+Après analyse des différentes options disponibles, nous avons retenu la stack
+suivante :
+
+  Couche           | Technologie        | Rôle dans le projet
+  -----------------|--------------------|--------------------------------------------
+  Front-end        | React.js           | Interface utilisateur (tableaux de bord,
+                   |                    | formulaires d'orientation)
+  Back-end         | Laravel            | Serveur API REST, logique métier,
+                   |                    | gestion des utilisateurs
+  Base de données  | MySQL              | Stockage des étudiants, formations,
+                   |                    | résultats d'orientation
+  Communication    | API REST (JSON)    | Échange de données entre front-end
+                   |                    | et back-end
+  Authentification | JWT (JSON Web      | Gestion des sessions et des rôles
+                   | Token)             | (étudiant, conseiller, admin)
+
+Cette stack forme un ensemble cohérent, moderne et adapté à notre niveau de
+formation, permettant une transition fluide entre la modélisation UML et
+l'implémentation concrète.
+
+
+================================================================================
+3. JUSTIFICATION DES CHOIX TECHNOLOGIQUES
+================================================================================
+
+3.1 React.js — Framework Front-end
+------------------------------------
+React.js est une bibliothèque JavaScript développée par Meta (Facebook), aujourd'hui
+l'une des plus utilisées dans le développement d'interfaces web modernes.
+Raisons du choix :
+
+  - Cohérence technologique : React utilise JavaScript, réduisant la charge
+    cognitive et facilitant la collaboration au sein du groupe.
+  - Composants réutilisables : l'approche par composants correspond bien à la
+    décomposition modulaire de notre modélisation UML.
+  - Performances : grâce au Virtual DOM, React met à jour l'interface de manière
+    optimisée, important pour des tableaux de bord dynamiques.
+  - Écosystème riche : React Router, Axios, Material UI, etc.
+  - Employabilité : framework front-end le plus demandé selon les enquêtes
+    Stack Overflow 2023 et 2024.
+
+
+3.2 Laravel — Framework Back-end
+----------------------------------
+Laravel est un framework web open-source basé sur PHP. Justifications :
+
+  - Structure MVC claire : organisation claire et structurée du code.
+  - Rapidité de développement : outils intégrés (authentification, routes,
+    migrations de base de données).
+  - Sécurité intégrée : protection contre injections SQL, CSRF et XSS.
+  - Communauté et documentation : large communauté, documentation riche.
+  - Gestion simplifiée de la base de données : Eloquent ORM.
+  - Adéquation avec le projet : les entités UML (Étudiant, Formation, Résultat,
+    Conseiller) s'implémentent directement en modèles, contrôleurs et routes.
+
+
+3.3 MySQL — Base de données
+-----------------------------
+MySQL est un système de gestion de base de données relationnelle open-source.
+
+  - Modèle relationnel : le diagramme de classes UML se traduit facilement
+    en tables.
+  - Intégration avec Laravel : manipulation via Eloquent ORM sans SQL direct.
+  - Simplicité d'utilisation : outils comme phpMyAdmin.
+  - Maîtrise : bien connu par l'équipe.
+
+
+================================================================================
+4. BENCHMARK DES FRAMEWORKS
+================================================================================
+
+4.1 Benchmark Back-end
+------------------------
+Comparaison de Laravel avec les principales alternatives :
+
+  Critère                  | Laravel  | Spring Boot | Django REST | Node.js+Express
+  -------------------------|----------|-------------|-------------|----------------
+  Langage                  | PHP      | Java        | Python      | JavaScript
+  Courbe d'apprentissage   | ****     | ***         | ****        | *****
+  Performance              | ***      | *****       | ****        | ****
+  Cohérence avec UML       | **       | *****       | ***         | ***
+  Sécurité intégrée        | ****     | *****       | ****        | ***
+  Écosystème/libs          | ***      | ****        | ****        | *****
+  Cohérence full-stack     | ***      | *           | *           | *****
+  Employabilité            | ***      | *****       | ****        | *****
+  Adapté au projet         | Oui      | Overkill    | Oui         | Partiel
+
+Analyse :
+Spring Boot aurait été idéal pour la cohérence avec l'UML (Java orienté objet),
+mais présente une courbe d'apprentissage trop élevée. Django REST exige la maîtrise
+de Python. Laravel est un framework PHP accessible, sécurisé et bien documenté,
+offrant une bonne intégration avec React et un développement rapide côté serveur.
+
+
+4.2 Benchmark Front-end
+-------------------------
+Comparaison de React.js avec les principales alternatives :
+
+  Critère                  | React.js | Angular  | Vue.js   | Svelte
+  -------------------------|----------|----------|----------|--------
+  Langage                  | JSX/JS   | TypeScript | JS/TS  | JS
+  Courbe d'apprentissage   | ****     | **       | *****    | ****
+  Flexibilité              | *****    | ***      | ****     | ***
+  Communauté / docs        | *****    | ****     | ****     | **
+  SPA complexes            | *****    | *****    | ****     | ***
+  Richesse des composants  | *****    | ****     | ****     | ***
+  Employabilité            | *****    | ****     | ***      | **
+  Cohérence full-stack JS  | *****    | ****     | ****     | ****
+  Adapté au projet         | Oui      | Oui      | Oui      | Partiel
+
+Analyse :
+React.js a été choisi pour sa flexibilité, sa popularité et sa vaste documentation.
+Il s'intègre facilement avec Laravel et permet des interfaces réactives. Angular
+est plus complexe pour une équipe intermédiaire. Vue.js a un écosystème plus limité.
+Svelte est émergent avec peu de ressources. React représente le meilleur compromis.
+
+
+================================================================================
+6. CONCLUSION
+================================================================================
+
+Notre choix technologique s'est orienté vers une architecture moderne :
+React.js (front-end), Laravel (back-end) et MySQL (persistance des données).
+
+Cette stack répond à plusieurs critères fondamentaux :
+
+  - Cohérence pédagogique et pragmatique : React et Laravel sont bien documentés,
+    matures et largement utilisés.
+  - Adéquation avec le projet : les entités et relations UML se transposent
+    facilement dans l'architecture MVC de Laravel, et React permet des interfaces
+    dynamiques et réactives.
+  - Employabilité : Laravel et React sont des compétences recherchées sur le
+    marché du travail.
+  - Maintenabilité et évolutivité : combinaison permettant de structurer
+    clairement le code et d'en faciliter l'évolution future.
+
+Ainsi, cette stack permettra de concrétiser efficacement la modélisation réalisée
+au premier semestre et de livrer une application fonctionnelle, robuste et
+maintenable.
+
+
+================================================================================
+— Fin du rapport — Groupe 1 · Mme Ngom · 2024–2025 —
+================================================================================
