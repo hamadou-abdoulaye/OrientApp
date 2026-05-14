@@ -114,6 +114,12 @@ export default function FormationDetail() {
         </div>
 
         {/* Bouton intérêt */}
+        {formation.site_web && (
+          <a href={formation.site_web} target="_blank" rel="noopener noreferrer"
+            className="mt-4 w-full py-3 rounded-xl font-semibold text-sm transition flex items-center justify-center gap-2 bg-white border-2 border-indigo-200 text-indigo-600 hover:bg-indigo-50">
+            🌐 Visiter le site officiel de {formation.etablissement}
+          </a>
+        )}
         <button onClick={() => toggleInteret.mutate()}
           className={`mt-4 w-full py-3 rounded-xl font-semibold text-sm transition ${
             formation.je_suis_interesse

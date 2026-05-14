@@ -72,9 +72,9 @@ export default function Questionnaire() {
     <div className="max-w-2xl mx-auto space-y-6">
 
       {/* Header */}
-      <div className="bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl p-6 text-white">
+      <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-white border border-white/20">
         <h1 className="text-2xl font-bold">📋 Questionnaire d'orientation</h1>
-        <p className="text-purple-100 text-sm mt-1">Remplissez ce formulaire pour obtenir des recommandations personnalisées.</p>
+        <p className="text-white/70 text-sm mt-1">Remplissez ce formulaire pour obtenir des recommandations personnalisées.</p>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">

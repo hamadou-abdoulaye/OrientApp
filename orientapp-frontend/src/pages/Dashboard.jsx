@@ -37,7 +37,9 @@ export default function Dashboard() {
   return (
     <div className="space-y-8">
       {/* Hero */}
-      <div className="relative bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-gradient-to-br from-indigo-600/90 via-purple-600/70 to-pink-500/80 bg-cover bg-center rounded-3xl p-8 text-white overflow-hidden">
+      <div className="relative rounded-3xl p-8 text-white overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1400&auto=format&fit=crop&q=80" alt="campus" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-700/85 via-purple-700/75 to-pink-600/70" />
         <div className="absolute inset-0 bg-black/20" />
         <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-40 h-40 bg-white opacity-5 rounded-full translate-y-1/2 -translate-x-1/2" />

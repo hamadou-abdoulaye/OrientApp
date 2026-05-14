@@ -12,7 +12,7 @@ class Formation extends Model
     protected $fillable = [
         'nom', 'domaine', 'description', 'etablissement',
         'ville', 'frais_scolarite', 'duree_annees',
-        'debouches', 'conditions_acces', 'niveau', 'logo_url', 'type', 'image_url',
+        'debouches', 'conditions_acces', 'niveau', 'logo_url', 'type', 'image_url', 'site_web',
     ];
 
     protected function casts(): array

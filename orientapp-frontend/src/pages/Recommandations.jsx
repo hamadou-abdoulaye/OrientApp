@@ -30,17 +30,17 @@ export default function Recommandations() {
     <div className="space-y-6">
 
       {/* Header */}
-      <div className="bg-gradient-to-r from-orange-400 to-pink-500 rounded-2xl p-6 text-white">
+      <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-white border border-white/20">
         <h1 className="text-2xl font-bold">Mes recommandations</h1>
-        <p className="text-orange-100 text-sm mt-1">{data?.length || 0} formation(s) correspondant à votre profil</p>
+        <p className="text-white/70 text-sm mt-1">{data?.length || 0} formation(s) correspondant à votre profil</p>
         <div className="flex gap-4 mt-4">
-          <div className="bg-white bg-opacity-20 rounded-xl px-4 py-2 text-center">
+          <div className="bg-white/20 rounded-xl px-4 py-2 text-center">
             <p className="text-xl font-bold">{data?.length || 0}</p>
-            <p className="text-xs text-orange-100">Total</p>
+            <p className="text-xs text-white/70">Total</p>
           </div>
-          <div className="bg-white bg-opacity-20 rounded-xl px-4 py-2 text-center">
+          <div className="bg-white/20 rounded-xl px-4 py-2 text-center">
             <p className="text-xl font-bold">{favoris.length}</p>
-            <p className="text-xs text-orange-100">Favoris</p>
+            <p className="text-xs text-white/70">Favoris</p>
           </div>
         </div>
       </div>

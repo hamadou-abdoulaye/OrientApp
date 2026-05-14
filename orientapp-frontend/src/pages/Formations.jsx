@@ -27,9 +27,9 @@ export default function Formations() {
     <div className="space-y-6">
 
       {/* Header */}
-      <div className="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl p-6 text-white">
+      <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-white border border-white/20">
         <h1 className="text-2xl font-bold">Catalogue des formations</h1>
-        <p className="text-cyan-100 text-sm mt-1">Explorez toutes les formations disponibles au Sénégal.</p>
+        <p className="text-white/70 text-sm mt-1">Explorez toutes les formations disponibles au Sénégal.</p>
       </div>
 
       {/* Filtres */}

@@ -49,7 +49,9 @@ export default function Register() {
     <div className="min-h-screen flex">
 
       {/* Left — Illustration */}
-      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-600 flex-col justify-between p-12 relative overflow-hidden">
+      <div className="hidden lg:flex lg:w-1/2 flex-col justify-between p-12 relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=1200&auto=format&fit=crop&q=80" alt="étudiants" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-700/90 via-teal-700/80 to-cyan-600/80" />
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 right-20 w-64 h-64 bg-white opacity-5 rounded-full" />
           <div className="absolute bottom-20 left-10 w-96 h-96 bg-white opacity-5 rounded-full" />
@@ -86,8 +88,10 @@ export default function Register() {
       </div>
 
       {/* Right — Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-gray-50 overflow-y-auto">
-        <div className="w-full max-w-md py-8">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 relative overflow-y-auto">
+        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&auto=format&fit=crop&q=80" alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-white/90 backdrop-blur-sm" />
+        <div className="w-full max-w-md py-8 relative z-10">
 
           {/* Mobile logo */}
           <div className="flex items-center gap-3 mb-8 lg:hidden">

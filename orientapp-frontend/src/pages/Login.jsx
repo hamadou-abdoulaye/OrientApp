@@ -29,11 +29,12 @@ export default function Login() {
     <div className="min-h-screen flex">
 
       {/* Left — Illustration */}
-      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 flex-col justify-between p-12 relative overflow-hidden">
+      <div className="hidden lg:flex lg:w-1/2 flex-col justify-between p-12 relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1200&auto=format&fit=crop&q=80" alt="université" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-700/90 via-purple-700/80 to-pink-600/80" />
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-20 w-64 h-64 bg-white opacity-5 rounded-full" />
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-white opacity-5 rounded-full" />
-          <div className="absolute top-1/2 left-1/2 w-48 h-48 bg-white opacity-5 rounded-full -translate-x-1/2 -translate-y-1/2" />
         </div>
         <div className="relative">
           <div className="flex items-center gap-3">
@@ -67,8 +68,10 @@ export default function Login() {
       </div>
 
       {/* Right — Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-gray-50">
-        <div className="w-full max-w-md">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 relative">
+        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800&auto=format&fit=crop&q=80" alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-white/90 backdrop-blur-sm" />
+        <div className="w-full max-w-md relative z-10">
 
           {/* Mobile logo */}
           <div className="flex items-center gap-3 mb-8 lg:hidden">

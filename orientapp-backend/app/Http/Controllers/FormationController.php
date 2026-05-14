@@ -71,6 +71,7 @@ class FormationController extends Controller
             'niveau'           => 'in:Licence,Master,BTS,DUT,Doctorat,Autre',
             'type'             => 'in:public,prive',
             'logo_url'         => 'nullable|string',
+            'site_web'         => 'nullable|string',
         ]);
 
         return response()->json(Formation::create($data), 201);
@@ -91,6 +92,7 @@ class FormationController extends Controller
             'niveau'           => 'in:Licence,Master,BTS,DUT,Doctorat,Autre',
             'type'             => 'in:public,prive',
             'logo_url'         => 'nullable|string',
+            'site_web'         => 'nullable|string',
         ]));
 
         return response()->json($formation);
