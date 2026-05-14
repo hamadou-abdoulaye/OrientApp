@@ -24,17 +24,35 @@ Installer ces outils avant tout :
 2. CONFIGURER LA BASE DE DONNÉES
 ----------------------------------------------------------------
 
-  Avec XAMPP (recommandé pour débutants) :
-  -----------------------------------------
+  OPTION A — Importer la BD directement (RECOMMANDÉ)
+  ----------------------------------------------------
+  Un fichier orientapp_db.sql est fourni dans le projet.
+
+  1. Ouvrir XAMPP → démarrer Apache et MySQL
+  2. Aller sur http://localhost/phpmyadmin
+  3. Créer une base de données nommée : orientapp_db
+  4. Cliquer sur Importer → choisir le fichier orientapp_db.sql
+  5. Cliquer sur Exécuter
+
+  Ou en ligne de commande :
+  mysql -u root -p orientapp_db < orientapp_db.sql
+
+  ✅ Toutes les tables et données sont importées automatiquement.
+     Pas besoin de lancer php artisan migrate ni db:seed !
+
+
+  OPTION B — Créer la BD manuellement (si OPTION A échoue)
+  ----------------------------------------------------------
   1. Ouvrir XAMPP → démarrer Apache et MySQL
   2. Aller sur http://localhost/phpmyadmin
   3. Créer une base de données nommée : orientapp_db
 
-  Avec MySQL en ligne de commande :
-  ----------------------------------
+  Ou en ligne de commande :
   mysql -u root -p
   CREATE DATABASE orientapp_db;
   exit;
+
+  Puis lancer les migrations (voir étape 3).
 
 
 ----------------------------------------------------------------
@@ -75,10 +93,10 @@ Installer ces outils avant tout :
 
   Ensuite lancer ces commandes :
   -------------------------------
-  # Créer les tables
+  # Créer les tables (seulement si OPTION B choisie à l'étape 2)
   php artisan migrate
 
-  # Insérer les données (formations + universités)
+  # Insérer les données (seulement si OPTION B choisie à l'étape 2)
   php artisan db:seed
   php artisan db:seed --class=UniversiteInfoSeeder
 
