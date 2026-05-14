@@ -1,0 +1,153 @@
+================================================================
+         GUIDE DE LANCEMENT — OrientApp
+================================================================
+
+PRÉREQUIS
+---------
+Installer ces outils avant tout :
+- PHP 8.2+       : https://www.php.net/downloads
+- Composer       : https://getcomposer.org/download/
+- Node.js 18+    : https://nodejs.org
+- MySQL / XAMPP  : https://www.apachefriends.org/
+- Git            : https://git-scm.com/downloads
+
+
+----------------------------------------------------------------
+1. CLONER LE PROJET
+----------------------------------------------------------------
+
+  git clone https://github.com/hamadou-abdoulaye/OrientApp.git
+  cd OrientApp
+
+
+----------------------------------------------------------------
+2. CONFIGURER LA BASE DE DONNÉES
+----------------------------------------------------------------
+
+  Avec XAMPP (recommandé pour débutants) :
+  -----------------------------------------
+  1. Ouvrir XAMPP → démarrer Apache et MySQL
+  2. Aller sur http://localhost/phpmyadmin
+  3. Créer une base de données nommée : orientapp_db
+
+  Avec MySQL en ligne de commande :
+  ----------------------------------
+  mysql -u root -p
+  CREATE DATABASE orientapp_db;
+  exit;
+
+
+----------------------------------------------------------------
+3. LANCER LE BACKEND
+----------------------------------------------------------------
+
+  cd orientapp-backend
+
+  # Installer les dépendances
+  composer install
+
+  # Copier le fichier de config
+  cp .env.example .env
+
+  # Générer la clé de l'application
+  php artisan key:generate
+
+  # Générer le secret JWT
+  php artisan jwt:secret
+
+
+  Ouvrir le fichier .env et modifier ces lignes :
+  ------------------------------------------------
+  APP_URL=http://127.0.0.1:8000
+
+  DB_CONNECTION=mysql
+  DB_HOST=127.0.0.1
+  DB_PORT=3306
+  DB_DATABASE=orientapp_db
+  DB_USERNAME=root
+  DB_PASSWORD=          (vide si XAMPP par défaut)
+
+  FILESYSTEM_DISK=public
+  SESSION_DRIVER=cookie
+  CACHE_STORE=file
+  QUEUE_CONNECTION=sync
+
+
+  Ensuite lancer ces commandes :
+  -------------------------------
+  # Créer les tables
+  php artisan migrate
+
+  # Insérer les données (formations + universités)
+  php artisan db:seed
+  php artisan db:seed --class=UniversiteInfoSeeder
+
+  # Créer le lien storage
+  php artisan storage:link
+
+  # Lancer le serveur
+  php artisan serve
+
+  ✅ Backend disponible sur : http://127.0.0.1:8000
+
+
+----------------------------------------------------------------
+4. LANCER LE FRONTEND
+----------------------------------------------------------------
+
+  Ouvrir un NOUVEAU terminal :
+
+  cd orientapp-frontend
+
+  # Installer les dépendances
+  npm install
+
+  # Lancer le serveur
+  npm run dev
+
+  ✅ Frontend disponible sur : http://localhost:5173
+
+
+----------------------------------------------------------------
+5. COMPTES DE CONNEXION
+----------------------------------------------------------------
+
+  Rôle          Email                   Mot de passe
+  ----------    ---------------------   ------------
+  Admin         admin@orientapp.com     Admin@1234
+  Étudiant      créer via /register     —
+  Conseiller    créer via l'admin       —
+
+  Pour créer un compte conseiller :
+  1. Se connecter en admin
+  2. Aller dans Conseillers → Ajouter
+
+
+----------------------------------------------------------------
+6. STRUCTURE DU PROJET
+----------------------------------------------------------------
+
+  OrientApp/
+  ├── orientapp-backend/    →  API Laravel  (port 8000)
+  └── orientapp-frontend/   →  Interface React (port 5173)
+
+
+----------------------------------------------------------------
+7. PROBLÈMES FRÉQUENTS
+----------------------------------------------------------------
+
+  ❌ Erreur "jwt:secret introuvable"
+     → composer require tymon/jwt-auth
+
+  ❌ Erreur de connexion à la base de données
+     → Vérifier que MySQL est bien démarré
+     → Vérifier DB_USERNAME et DB_PASSWORD dans .env
+
+  ❌ Page blanche sur le frontend
+     → Vérifier que le backend tourne sur http://127.0.0.1:8000
+     → Ouvrir la console du navigateur (F12) pour voir l'erreur
+
+
+================================================================
+         © 2025 OrientApp — Groupe 3
+================================================================
